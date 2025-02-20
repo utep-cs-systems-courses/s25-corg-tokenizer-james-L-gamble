@@ -9,7 +9,7 @@ int space_char(char c){
     return 1;
   } else if (c == '\t'){
     return 1;
-  } else{
+  } else {
     return 0;
   }
 }
@@ -18,9 +18,8 @@ int space_char(char c){
    character (not tab or space).  
    Zero terminators are not printable (therefore false) */ 
 int non_space_char(char c){
-  int isWhitespace = space_char(c);
 
-  if(isWhitespace || (c == '0')){
+  if((c == '\0') || space_char(c)){
     return 0;
   }else{
     return 1;
@@ -34,6 +33,7 @@ int non_space_char(char c){
    str does not contain any tokens. */
 char *token_start(char *str){
 
+
   return 0;
 }
 
@@ -45,7 +45,7 @@ char *token_terminator(char *token){
 
 /* Counts the number of tokens in the string argument. */
 int count_tokens(char *str){
-
+  
   return 0;
 }
 
