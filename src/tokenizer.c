@@ -5,16 +5,28 @@
    ('\t' or ' ').  
    Zero terminators are not printable (therefore false) */
 int space_char(char c){
-
-  return 0;
+  if(c == ' '){
+    return 1;
+  } else if (c == '\t'){
+    return 1;
+  } else{
+    return 0;
+  }
 }
 
 /* Return true (non-zero) if c is a non-whitespace 
    character (not tab or space).  
    Zero terminators are not printable (therefore false) */ 
 int non_space_char(char c){
+  int isWhitespace = space_char(c);
 
-  return 0;
+  if(isWhitespace || (c == '0')){
+    return 0;
+  }else{
+    return 1;
+  }
+  
+  //  return 0;
 }
 
 /* Returns a pointer to the first character of the next 
